@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1771478227233,
+    "name": "Sham Singh",
+    "department": "Electrical",
+    "salary": 10000,
+    "gender": "Female"
+  },
+  {
+    "id": 1771478276429,
+    "name": "Biru Singh",
+    "department": "Mechanical",
+    "salary": 40000,
+    "gender": "Male"
+  }
+]

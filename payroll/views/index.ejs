@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Employee Payroll</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="/img1.webp" style="width: 30px; border-radius: 4px;"> 
+        <div class="logo-text">EMPLOYEE<br><span class="logo-green">PAYROLL</span></div>
+    </div>
+</header>
+
+<div class="main-content">
+    <div class="dashboard-header">
+        <h2>Employee Details</h2>
+        <div class="header-actions">
+            <input type="text" placeholder="Search..." class="search-box">
+            <a href="/add" class="add-btn"><span>+</span> Add User</a>
+        </div>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                    <th>Start Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% employees.forEach(emp => { %>
+                <tr>
+                    <td>
+                        <div class="user-info">
+                            <img src="/<%= emp.profile || 'img1.webp' %>" class="profile-img">
+                            <span><%= emp.name %></span>
+                        </div>
+                    </td>
+                    <td style="color: #666;"><%= emp.gender %></td>
+                    <td>
+                        <div class="pill-container">
+                            <% if (Array.isArray(emp.department)) { %>
+                                <% emp.department.forEach(d => { %>
+                                    <span class="dept-pill"><%= d %></span>
+                                <% }) %>
+                            <% } else { %>
+                                <span class="dept-pill"><%= emp.department %></span>
+                            <% } %>
+                        </div>
+                    </td>
+                    <td style="font-weight: 500;">₹ <%= emp.salary.toLocaleString('en-IN') %></td>
+                    <td style="color: #666;"><%= emp.startDate || '29 Oct 2019' %></td>
+                    <td>
+                        <a href="/delete/<%= emp.id %>" class="action-btn" onclick="return confirm('Delete this?')">🗑️</a>
+                        <a href="/edit/<%= emp.id %>" class="action-btn">✏️</a>
+                    </td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

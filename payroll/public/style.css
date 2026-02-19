@@ -1,0 +1,156 @@
+/* Import a clean modern font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7;
+    color: #42515f;
+}
+
+/* Header with Logo */
+header {
+    background: white;
+    padding: 15px 10%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-text {
+    font-weight: bold;
+    line-height: 1.1;
+    font-size: 18px;
+}
+
+.logo-green { color: #8fb339; }
+
+/* Main Content Area */
+.main-content {
+    padding: 40px 10%;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.dashboard-header h2 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/* Search and Add Buttons */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-box {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+    background: white url('https://cdn-icons-png.flaticon.com/512/149/149852.png') no-repeat 90% center;
+    background-size: 15px;
+}
+
+.add-btn {
+    background-color: #8fb339;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Modern Table Design */
+.table-container {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #42515f;
+    color: white;
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+}
+
+/* User Profile Section */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Department Pills */
+.pill-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.dept-pill {
+    background-color: #e9f5db;
+    color: #7a9a01;
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    border: 1px solid #d4e09b;
+}
+
+/* Action Buttons */
+.action-btn {
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 18px;
+    color: #42515f;
+    transition: 0.2s;
+}
+
+.action-btn:hover { color: #8fb339; }
